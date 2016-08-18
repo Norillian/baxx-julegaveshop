@@ -1,0 +1,89 @@
+<div class="product-info">
+
+    <div class="nav-bar">
+
+        <a href="/" class="back-btn">&lt; <eSeller:Select text="label_back"/></a>
+
+    </div>
+
+    <div class="product-image">
+
+        <eSeller:Control ControlID="productimages" ControlType="ProductImages" />
+
+    </div>
+
+    <div class="product-details">
+
+        <h1>
+            <eSeller:Select Value-Of="Product:ProductName" />
+        </h1>
+
+        <eSeller:if istrue="Product:ShowProductID">
+            <div>
+                <eSeller:Select text="label_productid" />&amp;nbsp;<eSeller:Select Value-Of="Product:ProductID" />
+            </div>
+        </eSeller:if>
+        <eSeller:if istrue="Product:ShowExtProductID">
+            <div>
+                <eSeller:Select text="label_extproductid" />&amp;nbsp;<eSeller:Select Value-Of="Product:ExtProductID" />
+            </div>
+        </eSeller:if>
+        <eSeller:if istrue="Product:ShowAltExtProductID">
+            <div>
+                <eSeller:Select text="label_altextproductid" />&amp;nbsp;<eSeller:Select Value-Of="Product:AltExtProductID" />
+            </div>
+        </eSeller:if>
+        <eSeller:if istrue="Product:ShowProductEAN">
+            <div>
+                <eSeller:Select text="label_ean" />&amp;nbsp;<eSeller:Select Value-Of="Product:EAN" />
+            </div>
+        </eSeller:if>
+
+        <!-- Godt køb og Nyt produkt ikoner -->
+        <eSeller:If istrue="Product:ShowNewItemIcon">
+            <eSeller:IfOr istrue="Product:ShowGoodBuyIcon" />
+            <div id="etIcons">
+                <eSeller:If istrue="Product:ShowNewItemIcon">
+                    <eSeller:shopicon ControlID="imgNewProduct" shopicontype="NewProduct">
+                        <eSeller:Attribute Name="ToolTip" text="label_new_product" />
+                    </eSeller:shopicon>
+                </eSeller:If>
+                <eSeller:If istrue="Product:ShowGoodBuyIcon">
+                    <eSeller:shopicon ControlID="imgGoodBuy" shopicontype="GoodBuy">
+                        <eSeller:Attribute Name="ToolTip" text="label_good_buy" />
+                    </eSeller:shopicon>
+                </eSeller:If>
+            </div>
+        </eSeller:If>
+        <!-- Slut på Godt køb og Nyt produkt ikoner -->
+
+        <div class="manufacture-logo">
+            <eSeller:Control ControlID="manuflogo" ControlType="ManufacturerLogo" />
+        </div>
+
+        <eSeller:If isnotempty="Product:ProductShortDescription">
+            <div class="short-desc">
+                <eSeller:Select Value-Of="Product:ProductShortDescription" />
+            </div>
+        </eSeller:If>
+        <eSeller:If isnotempty="Product:ProductLongDescription">
+            <div class="long-desc">
+                <eSeller:Select Value-Of="Product:ProductLongDescription" />
+            </div>
+        </eSeller:If>
+
+        <div class="variant-products">
+            <eSeller:Control ControlID="variants" ControlType="VariantSelector" />
+        </div>
+
+        <eSeller:If istrue="Product:ShowAddToBasket">
+            <div class="etSelect">
+                <eSeller:BasketButton ControlID="btnBasket2">
+                    <eSeller:Attribute Name="ToolTip" text="tooltip_add_to_basket" />
+                </eSeller:BasketButton>
+            </div>
+        </eSeller:If>
+
+    </div>
+
+</div>

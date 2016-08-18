@@ -1,0 +1,175 @@
+<div id="etHeading">
+  <eSeller:Css Name="#etHeadingTable" Selector="#etHeading .HeaderBarTables" GroupName="#etgHeading" SelectorGroup="15" />
+  <eSeller:Css Name="#etHeadingRow" Selector="#etHeading tr.HeaderBar" GroupName="#etgHeading" SelectorGroup="18" />
+  <eSeller:Css Name="#etHeadingCell" Selector="#etHeading tr.HeaderBar td" GroupName="#etgHeading" SelectorGroup="24" />
+  <eSeller:Css Name="#etHeadingProductNameCell" Selector="#etHeading tr.HeaderBar td.etPname" GroupName="#etgHeading" SelectorGroup="19" />
+  <eSeller:Css Name="#etHeadingProductName" Selector="#etHeading tr.HeaderBar h1.HeaderBar" GroupName="#etgHeading" SelectorGroup="5" />
+  <eSeller:Css Name="#etPreviousPrice" Selector="#etHeading tr.HeaderBar td.etPreviousPrice" GroupName="#etgHeading" SelectorGroup="24" />
+  <eSeller:Css Name="#etPreviousPricePrice" Selector="#etHeading tr.HeaderBar td.etPreviousPrice span" GroupName="#etgHeading" SelectorGroup="5" />
+  <eSeller:Css Name="#etPrice" Selector="#etHeading tr.HeaderBar td.etPrice" GroupName="#etgHeading" SelectorGroup="24" />
+  <eSeller:Css Name="#etBasketFavorites" Selector="#etHeading tr.HeaderBar td.etFavorites" GroupName="#etgHeading" SelectorGroup="24" />
+  <eSeller:Css Name="#etBasket" Selector="#etHeading tr.HeaderBar td.etBasket" GroupName="#etgHeading" SelectorGroup="24" />
+  <eSeller:Css Name="#etBackA" Selector="#etHeading tr.HeaderBar td.etBack a" GroupName="#etgHeading" SelectorGroup="24" />
+  <eSeller:Css Name="#etBack" Selector="#etHeading tr.HeaderBar td.etBack" GroupName="#etgHeading" SelectorGroup="24" />
+  <eSeller:Css Name="#etSelect" Selector=".etSelect" GroupName="#etgHeading" SelectorGroup="24" />
+
+  <table class="HeaderBarTables">
+    <tr class="HeaderBar">
+      <td class="etBack">&lt; <a href="/"><eSeller:Select text="label_back"/></a></td>
+<!--
+      <td class="etPname">
+        <h1 style="display:inline;" class="HeaderBar">
+          <eSeller:Select Value-Of="Product:ProductName" />
+        </h1>
+      </td>
+-->
+      <eSeller:If istrue="Product:ShowSalesprice">
+        <eSeller:If istrue="Product:ShowPreviousSalesprice">
+          <td class="etPreviousPrice">
+            <eSeller:Select text="label_previous_price" />&amp;nbsp;<span>
+              <eSeller:Control ControlID="PreviousSalesPrice" ControlType="Productprice" />
+            </span>
+          </td>
+        </eSeller:If>
+        <td class="etPrice">
+          <eSeller:Select text="label_price" />&amp;nbsp;<eSeller:Control ControlID="SalesPrice" ControlType="Productprice" />
+        </td>
+      </eSeller:If>
+      <eSeller:If istrue="Product:ShowAddToFavorites">
+        <td class="etFavorites">
+          <eSeller:FavoritesButton ControlID="btnFavorites" >
+            <eSeller:Attribute Name="ToolTip" text="tooltip_add_to_product_favorite" />
+          </eSeller:FavoritesButton>
+        </td>
+      </eSeller:If>
+      <!--<eSeller:If istrue="Product:ShowAddToBasket">
+        <td class="etBasket">
+          <eSeller:BasketButton ControlID="btnBasket">
+            <eSeller:Attribute Name="ToolTip" text="tooltip_add_to_basket" />
+          </eSeller:BasketButton>
+        </td>
+      </eSeller:If>-->
+<!--
+      <td class="etBack">&lt; <a href="/">TILBAGE</a></td>
+-->
+    </tr>
+  </table>
+</div>
+<div style="float: right">
+  <eSeller:Control ControlID="productimages" ControlType="ProductImages" />
+  <eSeller:if istrue="Product:isAuction">
+    <eSeller:Control ControlID="AuctionProperties" ControlType="AuctionProperties" />
+  </eSeller:if>
+</div>
+<div class="content">
+    <div>
+        <h1 style="display:inline;" class="HeaderBar">
+          <eSeller:Select Value-Of="Product:ProductName" />
+        </h1>
+    </div>
+      <eSeller:if istrue="Product:ShowProductID">
+    <div>
+      <eSeller:Select text="label_productid" />&amp;nbsp;<eSeller:Select Value-Of="Product:ProductID" />
+    </div>
+  </eSeller:if>
+  <eSeller:if istrue="Product:ShowExtProductID">
+    <div>
+      <eSeller:Select text="label_extproductid" />&amp;nbsp;<eSeller:Select Value-Of="Product:ExtProductID" />
+    </div>
+  </eSeller:if>
+  <eSeller:if istrue="Product:ShowAltExtProductID">
+    <div>
+      <eSeller:Select text="label_altextproductid" />&amp;nbsp;<eSeller:Select Value-Of="Product:AltExtProductID" />
+    </div>
+  </eSeller:if>
+  <eSeller:if istrue="Product:ShowProductEAN">
+    <div>
+      <eSeller:Select text="label_ean" />&amp;nbsp;<eSeller:Select Value-Of="Product:EAN" />
+    </div>
+  </eSeller:if>
+
+  <!-- Godt køb og Nyt produkt ikoner -->
+  <eSeller:If istrue="Product:ShowNewItemIcon">
+    <eSeller:IfOr istrue="Product:ShowGoodBuyIcon" />
+    <div id="etIcons">
+      <eSeller:Css Name="#etIconsArea" Selector="#etIcons" GroupName="#etgIcons" SelectorGroup="12" />
+      <eSeller:Css Name="#etIcons" Selector="#etIcons img" GroupName="#etgIcons" SelectorGroup="26" />
+      <eSeller:If istrue="Product:ShowNewItemIcon">
+        <eSeller:shopicon ControlID="imgNewProduct" shopicontype="NewProduct">
+          <eSeller:Attribute Name="ToolTip" text="label_new_product" />
+        </eSeller:shopicon>
+      </eSeller:If>
+      <eSeller:If istrue="Product:ShowGoodBuyIcon">
+        <eSeller:shopicon ControlID="imgGoodBuy" shopicontype="GoodBuy">
+          <eSeller:Attribute Name="ToolTip" text="label_good_buy" />
+        </eSeller:shopicon>
+      </eSeller:If>
+    </div>
+  </eSeller:If>
+  <!-- Slut på Godt køb og Nyt produkt ikoner -->
+
+  <eSeller:if isfalse="Product:isAuction">
+    <eSeller:Css Name="#etStockStatusText" Selector="#etStockStatusText" GroupName="#etgStockStatus" SelectorGroup="12" />
+    <eSeller:Css Name="#etStockStatusIcon" Selector="#etStockStatusText img" GroupName="#etgStockStatus" SelectorGroup="26" />
+    <eSeller:Css Name="#etStockStatusProduct" Selector="#etStockStatusProduct" GroupName="#etgStockStatus" SelectorGroup="12" />
+
+    <div id="etStockStatusText">
+      <eSeller:Control ControlID="StockstatusIcon" ControlType="StockStatus" />&amp;nbsp;<eSeller:Control ControlID="StockstatusStandardText" ControlType="StockStatus" />
+    </div>
+    <div id="etStockStatusProduct">
+      <eSeller:Control ControlID="StockStatus" ControlType="StockStatus" />
+    </div>
+  </eSeller:if>
+  <div>
+    <eSeller:Control ControlID="variants" ControlType="VariantSelector" />
+  </div>
+  <eSeller:if istrue="Product:hasProductLink">
+    <div>
+      <eSeller:Select text="label_related_links" />
+      <eSeller:HtmlElement TagName="a">
+        <eSeller:Attribute Name="class" Value="content" />
+        <eSeller:Attribute Name="target" Value="_blank" />
+        <eSeller:Attribute Name="href" Value-Of="link:ProductRelatedLink" />
+        <eSeller:Select Value-Of="link:ProductRelatedLinkText" />
+      </eSeller:HtmlElement>
+    </div>
+  </eSeller:if>
+  <div>
+    <eSeller:Control ControlID="manuflogo" ControlType="ManufacturerLogo" />
+  </div>
+</div>
+
+
+<eSeller:If isnotempty="Product:ProductShortDescription">
+  <div id="etShortDesc" class="content">
+    <eSeller:Css Name="#etShortDesc" Selector="#etShortDesc" GroupName="#etgTexts" SelectorGroup="12" />
+    <eSeller:Select Value-Of="Product:ProductShortDescription" />
+  </div>
+</eSeller:If>
+<eSeller:If isnotempty="Product:ProductLongDescription">
+  <div id="etLongDesc" class="content">
+    <eSeller:Css Name="#etLongDesc" Selector="#etLongDesc" GroupName="#etgTexts" SelectorGroup="12" />
+    <eSeller:Select Value-Of="Product:ProductLongDescription" />
+  </div>
+</eSeller:If>
+
+      <eSeller:If istrue="Product:ShowAddToBasket">
+        <div class="etSelect">
+          <eSeller:BasketButton ControlID="btnBasket2">
+            <eSeller:Attribute Name="ToolTip" text="tooltip_add_to_basket" />
+          </eSeller:BasketButton>
+        </div>
+      </eSeller:If>
+
+
+<div style="clear:both">
+  <br />
+</div>
+
+
+<eSeller:if istrue="Product:isAuction">
+  <eSeller:Control ControlID="actionbids" ControlType="AuctionBids" />
+</eSeller:if>
+<eSeller:if istrue="Product:isConfiguredProduct">
+  <eSeller:Control ControlID="productconf" ControlType="ProductConfiguration" />
+</eSeller:if>

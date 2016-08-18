@@ -1,0 +1,487 @@
+/* Baxx - Julegave shop */
+
+/* Template */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/images/editor/Design/Responsive/body.jpg');
+    font-family: arial !important;
+}
+
+label,
+input {
+    font-family: arial;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.banner-inner,
+.page-menu-top,
+.page-content {
+    margin:0 auto;
+    max-width:100%;
+    width:990px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-left: solid 1px #023333;
+    border-right: solid 1px #023333;
+}
+
+label,
+input,
+select {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.banner-inner {
+    border-top: solid 1px #023333;
+    margin-top: 6px;
+    position: relative;
+}
+
+#banner {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.page-content {
+    background-color: #f7f9f9;
+    border-top: solid 1px #023333;
+    border-bottom: solid 1px #023333;
+}
+
+.mobile-only {
+    display: none;
+}
+
+/* Element: banner */
+
+#banner > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#pMenuBaxxl0 a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 12px;
+    line-height: 16px;
+    display: block;
+    border-bottom: solid 1px #fff;
+}
+
+#LanguageSelect h2 {
+    display: none !important;
+}
+
+#LanguageSelectbdy select {
+    border: medium none;
+    background-color: transparent;
+    color: #fff;
+    border-bottom: solid 1px #fff;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
+
+/* Page: login */
+
+#loginBox {
+    max-width: 293px;
+    margin: 0 auto 136px;
+    text-align: left;
+}
+
+#loginBox h2 {
+    margin: 100px 0 24px 0;
+    color: #666666;
+    text-transform: uppercase;
+    font-family: arial;
+    font-size: 26px;
+    font-weight: normal;
+    font-weight: bold;
+}
+
+#loginBoxbdy label {
+    display: block;
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    color: #666666;
+    font-family: arial;
+}
+
+#loginBoxbdy label input {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 29px;
+    height: 29px;
+    border: solid 1px #a8a9a9;
+    padding: 2px;
+    width: 193px;
+    font-size: 14px;
+    color: #666666;
+}
+
+#loginBoxbdy .button {
+    text-align: right;
+}
+
+#loginBoxbdy .button input {
+    width: 90px;
+    height: 29px;
+    line-height: 29px;
+    color: #fff;
+    background-color: #ab0f2b;
+    border: medium none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.langauge-selector {
+    display: inline-block;
+    line-height: 29px;
+    font-size: 12px;
+    color: #666666;
+    margin-right: 5px;
+}
+
+.langauge-selector a {
+    line-height: 29px;
+    font-size: 12px;
+    color: #666666;
+    display: inline-block;
+    margin: 0 6px;
+    text-decoration: none;
+}
+
+/* Page: productlists */
+
+.plist {
+    width: 100%;
+    padding: 0 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.plist .plistE6 {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 10px 20px;
+    width: 25%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.plist .plistE6 .prelement {
+    border: solid 1px #000;
+    background-color: #fff;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.plist .plistE6 .prelement .prmain {
+    padding: 20px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.plist .plistE6 .prelement .prmain .primg {
+    margin-bottom: 20px;
+}
+
+.plist .plistE6 .prelement .prmain .primg img {
+    max-width: 100%;
+    height: auto !important;
+}
+
+.plist .plistE6 .prelement .prmain .hlink {
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    min-height: 48px;
+}
+
+.plist .plistE6 .prelement .prmain .readMore {
+    color: #1f267d;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.plist .plistE6 .prelement .prbasket {
+    min-height: 90px;
+    border-top: solid 1px #acabab;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 12px 6px;
+}
+
+.ecVariantTbl thead .c1 {
+    font-weight: bold;
+    padding-bottom: 5px;
+    font-size: 12px;
+    text-align: left;
+    font-size: 14px  !important;
+}
+
+.ecVariantTbl tbody .c1 {
+    font-size: 12px;
+    padding-right: 10px;
+    font-size: 14px !important;
+}
+
+.ecVariantTbl select {
+    display: block;
+    width: 100%;
+    padding: 5px 7px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+}
+
+.ecVariantTbl select option {
+    font-size: 14px;
+    line-height: 20px;
+    color: #55595c;
+}
+
+/* Page: product details */
+
+#Companylogo1bdy {
+    text-align: right;
+    float: none !important;
+    clear:both !important;
+}
+
+.product-info {
+    display: block;
+    width: 100%;
+    padding: 0 0 20px;
+}
+
+.product-info > div {
+    display: inline-block;
+    text-align: left;
+    width: 50%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: top;
+    padding: 0 10px;
+}
+
+.product-info > div.nav-bar {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.product-info > div.nav-bar a {
+    display: block;
+    width: 120px;
+    font-size: 14px;
+    color: #000;
+    border: solid 1px #000;
+    border-radius: 5px;
+    line-height: 32px;
+    background-color: #fff;
+    margin: 5px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.product-info > div.product-image {
+    padding-left: 20px;
+}
+
+.product-image img {
+    height: auto !important;
+}
+
+.product-info > div.product-details {
+    padding-right: 20px;
+}
+
+.product-details > div {
+    max-width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.product-details h1 {
+    font-size: 26px;
+    margin: 0;
+}
+
+.variant-products {
+    margin-bottom: 10px;
+    margin-left: -5px;
+}
+
+/* Info boxes */
+
+#ucInfoMessagebdy div {
+    font-size: 16px;
+    display: block;
+    margin: 10px 0;
+}
+
+/* Page: Selected gift */
+
+#ShopContent .selected-gift {
+    margin: 20px auto;
+}
+
+#ShopContent .selected-gift input {
+    background-color: #ccc;
+    border: medium none;
+    color: #000;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 24px;
+    margin: 0 5px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.page-content-pane.selected-gift #Companylogo1bdy {
+    text-align: center !important;
+}
+
+/* Page only content panes, hide layout cms until the site is live */
+.page-content.content-only-pane #layoutCmsbdy {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+
+    /* Page: productlists */
+
+    .plist .plistE6 {
+        width: 33.33%;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    /* Page: productlists */
+
+    .plist .plistE6 {
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    /* Template */
+
+    .tablet-up {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .mobile-only img {
+        width: 100%;
+    }
+
+    #Companylogo1bdy {
+        text-align: center;
+    }
+
+    #Companylogo1bdy img {
+        max-width: 40%;
+    }
+
+    /* Page: login */
+
+    .banner-inner,
+    .page-menu-top,
+    .page-content {
+        margin:0 10px;
+        width: auto;
+        max-width: 100%;
+    }
+
+    /* Page: product details */
+
+    .product-info > div {
+        width: 100%;
+        padding: 0 10px 10px !important;
+    }
+
+    .product-image,
+    .ucImageControl {
+        text-align: center;
+    }
+
+    .product-image .ucImageControl img {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    #ec6PopFrame {
+        left: 10px !important;
+        right: 10px !important;
+    }
+
+    .product-details h1 {
+        font-size: 20px;
+    }
+
+    .product-info > div.nav-bar {
+        text-align: center;
+    }
+
+    .product-info > div.nav-bar a {
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    /* Page: productlists */
+
+    .plist .plistE6 {
+        width: 100%;
+    }
+
+}
