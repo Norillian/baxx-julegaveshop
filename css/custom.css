@@ -66,7 +66,21 @@ select {
 
 #banner > div {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
+}
+
+#pMenuBaxxl0 {
+    max-width: 320px;
+}
+
+#pMenuBaxxl0 li {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+}
+
+#pMenuBaxxl0.one-line li {
+    width: 100%;
 }
 
 #pMenuBaxxl0 a {
@@ -76,7 +90,13 @@ select {
     font-size: 12px;
     line-height: 16px;
     display: block;
+    padding-left: 4px;
+    margin-bottom: 4px;
     border-bottom: solid 1px #fff;
+}
+
+#pMenuBaxxl0.one-line li a {
+    padding-left: 0px;
 }
 
 #LanguageSelect h2 {
@@ -91,6 +111,10 @@ select {
     padding: 0;
     margin: 0;
     font-size: 12px;
+}
+
+#LanguageSelectbdy select option {
+    color: #000;
 }
 
 /* Page: login */
@@ -241,6 +265,32 @@ select {
     padding: 12px 6px;
 }
 
+.plist .plistE6 .prelement .prbasket a {
+    width: 90px;
+    height: 29px;
+    line-height: 29px;
+    color: #fff;
+    background-color: #ab0f2b;
+    border: medium none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    text-decoration: none;
+    font-family: arial;
+    font-size: 14px;
+ }
+
+ .plist .plistE6 .prelement .prbasket a:before {
+     content: "Vælg";
+     text-decoration: none;
+ }
+
+.plist .plistE6 .prelement .prbasket a img {
+    display: none !important;
+}
+
 .ecVariantTbl thead .c1 {
     font-weight: bold;
     padding-bottom: 5px;
@@ -381,6 +431,52 @@ select {
     text-align: center !important;
 }
 
+/* Page: selected-gift-step5 */
+
+.selected-gift-step5 h3 {
+    display: none;
+}
+
+.selected-gift-step5 #ShopContent {
+    padding: 20px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.selected-gift-step5 input[type="submit"] {
+    background-color: #ccc;
+    border: medium none;
+    color: #000;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 24px;
+    margin: 0 5px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.selected-gift-step5 select,
+.selected-gift-step5 input[type="text"] {
+    display: inline-block;
+    padding: 5px 7px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+}
+
+.selected-gift-step5 select option {
+    font-size: 14px;
+    line-height: 20px;
+    color: #55595c;
+}
+
 /* Page only content panes, hide layout cms until the site is live */
 .page-content.content-only-pane #layoutCmsbdy {
     display: none;
@@ -410,7 +506,8 @@ select {
 
     /* Template */
 
-    .tablet-up {
+    .tablet-up,
+    .page-banner {
         display: none;
     }
 
@@ -422,20 +519,12 @@ select {
         width: 100%;
     }
 
-    #Companylogo1bdy {
-        text-align: center;
-    }
-
-    #Companylogo1bdy img {
-        max-width: 40%;
-    }
-
     /* Page: login */
 
     .banner-inner,
     .page-menu-top,
     .page-content {
-        margin:0 10px;
+        margin:0;
         width: auto;
         max-width: 100%;
     }
@@ -472,6 +561,98 @@ select {
 
     .product-info > div.nav-bar a {
         margin: 0 auto;
+    }
+
+    /* Page: selected-gift-step5 */
+
+    .selected-gift-step5 #ShopContent > table th {
+        display: none;
+    }
+
+    .selected-gift-step5 #ShopContent > table td {
+        display: block;
+        padding: 5px 0;
+        text-align: center !important;
+        width: 100%;
+        font-size: 14px;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .selected-gift-step5 input[type="submit"] {
+        margin: 10px 0
+    }
+
+    .selected-gift-step5 input[type="text"] {
+        margin-bottom: 10px;
+    }
+
+    /* Page: productlists */
+
+    .plist .plistE6 .prelement .prmain {
+        padding: 0px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .plist .plistE6 .prelement .prmain > a {
+        padding: 0 20px;
+    }
+
+    /* mobile menu */
+
+    .mobile-menu {
+        background-color: #fff;
+        margin-bottom: 20px;
+        text-align: left;
+        overflow: hidden;
+        height: 0;
+    }
+
+    .mobile-menu ul.menu-list {
+        padding: 20px !important;
+        display: block;
+    }
+
+    #precontentContainer > div:first-child,
+    #precontentContainer > div#Companylogo1bdy {
+        display: inline-block;
+        width: 80%;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    #precontentContainer > div:first-child {
+        text-align: left;
+        width: 20%;
+    }
+
+    #precontentContainer > div:first-child a {
+        font-size: 20px;
+        padding: 0 0  0 20px;
+    }
+
+    #Companylogo1bdy img {
+        max-width: 100%;
+        position: relative;
+        left: -12%;
+    }
+
+    .menu-list li {
+        display: block;
+        padding: 5px 0px;
+    }
+
+    .menu-list li a {
+        color: #888;
+        font-size: 12px;
+        line-height: 14px;
+        text-decoration: none;
+        font-weight: bold;
+        display: block;
+        text-transform: uppercase;
+        font-family: arial;
     }
 
 }

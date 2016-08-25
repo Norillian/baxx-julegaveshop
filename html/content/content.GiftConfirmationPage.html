@@ -1,0 +1,116 @@
+<eSeller:Data DataID="Order" DataType="OrderHead" IsOrderConfirmation="True"/>
+<!--<eSeller:Select Value-Of="Data_Order:ShipmentAddress2" />
+<eSeller:Select Value-Of="Data_Order:ShipmentAddress3" />-->
+
+
+<eSeller:If Test="Customer:CompanyName&lt;&gt;&quot;ESV&quot;">
+    <style>
+        #esvAddressSummary { display: none; }
+        #GiftNameBox { display: none; }
+    </style>
+</eSeller:If>
+
+<eSeller:If Test="Customer:CompanyName=&quot;ESV&quot;">
+    <style>
+        #backendAsp { display: none; }
+        #GiftNameBox { display: none; }
+        #esvAddressSummary > tbody > tr > td:nth-child(1) {}
+        .t-right { text-align: right; }
+        .t-center { text-align: center; }
+    </style>
+
+    <script>
+        $(function(){
+            var giftName = $("#GiftNameBox span").html();
+            var originalHtml = $("#frontlblOrderedGift font").html();
+
+            $("#frontlblOrderedGift font").html(originalHtml.replace("[giftName]", giftName))
+        });
+    </script>
+
+    <table cellspacing="0" cellpadding="5" width="100%" class="content" id="esvAddressSummary">
+        <tbody>
+            <tr>
+                <td class="content" align="center" colspan="2" height="25">
+                    <span id="frontlblOrderedGift">
+                        <font family="verdana" size="2">
+                            <b>Du har valgt gave "[giftName]" og kan nu logge ud.</b>
+                            <!--<br />
+<br />
+Kähler bordur og sølv vase - Gave 02
+<br />
+<br />
+<span style="font-weight: normal;">Udleveringssted / Delivery place:</span>
+<br />
+uge 4
+<br />Uge 4
+<br /><br /><br /><br />
+Navn / name:
+<br />
+Ulrik Bøndergaard
+<br />
+<br />-->
+                        </font>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="t-right">Address:</td>
+                <td><eSeller:Select Value-Of="CustomerLoginDeliveryAddress:Address" /></td>
+            </tr>
+            <eSeller:If IsNotEmpty="CustomerLoginDeliveryAddress:Address2">
+                <tr>
+                    <td class="t-right">Address 2:</td>
+                    <td><eSeller:Select Value-Of="CustomerLoginDeliveryAddress:Address2" /></td>
+                </tr>
+            </eSeller:If>
+            <eSeller:If IsNotEmpty="CustomerLoginDeliveryAddress:Address3">
+                <tr>
+                    <td class="t-right">Week:</td>
+                    <td><eSeller:Select Value-Of="CustomerLoginDeliveryAddress:Address3" /></td>
+                </tr>
+            </eSeller:If>
+            <eSeller:If IsNotEmpty="Customer:Address3">
+                <tr>
+                    <td class="t-right">Week:</td>
+                    <td><eSeller:Select Value-Of="Customer:Address3" /></td>
+                </tr>
+            </eSeller:If>
+            <tr>
+                <td class="t-right">Zip Code:</td>
+                <td><eSeller:Select Value-Of="CustomerLoginDeliveryAddress:ZIPCode" /></td>
+            </tr>
+            <tr>
+                <td class="t-right">City:</td>
+                <td><eSeller:Select Value-Of="CustomerLoginDeliveryAddress:City" /></td>
+            </tr>
+            <eSeller:If IsNotEmpty="CustomerLoginDeliveryAddress:Country">
+                <tr>
+                    <td class="t-right">Country:</td>
+                    <td><eSeller:Select Value-Of="CustomerLoginDeliveryAddress:Country" /></td>
+                </tr>
+            </eSeller:If>
+            <tr>
+                <td class="t-right">Delivery Week:</td>
+                <td><eSeller:Select Value-Of="Data_Order:ShipmentAddress3" /></td>
+            </tr>
+            <tr>
+                <td class="content" align="center" colspan="2" height="25">
+                </td>
+            </tr>
+            <tr class="actionButtons">
+                <td colspan="2"  class="t-center">
+                    <b><a href="/logout.aspx"><font family="verdana" size="2"><b>&gt;&gt;Log ud&lt;&lt;</b></font></a></b>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" height="25"></td>
+            </tr>
+            <tr>
+                <td class="content" align="center" colspan="2" height="25">
+                    <a id="ctl00_plhContent_hplPrint" href="/basket/shoppingcart_step5.aspx?OrderGUID=57cc508d-eb75-4733-967b-80f823af7ab7&amp;print=content" target="_new">Print kvittering</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</eSeller:If>

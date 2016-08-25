@@ -2,6 +2,22 @@
 
 $( document ).ready(function() {
 
+    //Check how many list elements that #pMenuBaxxl0 contains
+    if($('#pMenuBaxxl0 li').length === 1) {
+        $('#pMenuBaxxl0').addClass('one-line');
+    }
+
+    //Change active state on mobile menu
+    $( ".mobile-menu-button a" ).on( "click", function() {
+        $('.mobile-menu').toggleClass('active');
+    });
+
+    //Get menu items for mobile-menu
+    $( "#pMenuBaxxl0 li" ).each(function( index ) {
+        copyListElement = $(this).clone();
+        $('.mobile-menu ul').append(copyListElement);
+    });
+
     //Move langauge-selector to login box
     if($('.langauge-selector').length > 0) {
 
@@ -17,4 +33,31 @@ $( document ).ready(function() {
 
     }
 
+    if(window.location.href.indexOf("/basket/shoppingcart_step5.aspx") > -1) {
+
+        $('.page-content-pane').addClass('selected-gift-step5');
+
+    }
+
 });
+
+$(function(){
+  var nav = $('.mobile-menu'),
+      animateTime = 500,
+      navLink = $('.mobile-menu-button a');
+  navLink.click(function(){
+    if(nav.height() === 0){
+      autoHeightAnimate(nav, animateTime);
+    } else {
+      nav.stop().animate({ height: '0' }, animateTime);
+    }
+  });
+})
+
+/* Function to animate height: auto */
+function autoHeightAnimate(element, time){
+  	var curHeight = element.height(), // Get Default Height
+        autoHeight = element.css('height', 'auto').height(); // Get Auto Height
+    	  element.height(curHeight); // Reset to Default Height
+    	  element.stop().animate({ height: autoHeight }, time); // Animate to Auto Height
+}
