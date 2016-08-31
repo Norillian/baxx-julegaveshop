@@ -9,6 +9,27 @@ body {
     font-family: arial !important;
 }
 
+body.login-page {
+    background-image: url('/images/editor/Design/Responsive/tree-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: middle center;
+    background-color: #c1282f;
+}
+
+body.login-page .mobile-menu-button,
+body.login-page .page-header {
+    display: none !important;
+}
+
+body.login-page .page-content {
+    margin-top: 100px;
+    max-width: 400px;
+    border-radius: 20px;
+    border: solid 1px #f7f9f9;
+    box-shadow: 0px 0px 20px #881f24;
+}
+
 label,
 input {
     font-family: arial;
@@ -121,12 +142,12 @@ select {
 
 #loginBox {
     max-width: 293px;
-    margin: 0 auto 136px;
+    margin: 0 auto 60px;
     text-align: left;
 }
 
 #loginBox h2 {
-    margin: 100px 0 24px 0;
+    margin: 50px 0 24px 0;
     color: #666666;
     text-transform: uppercase;
     font-family: arial;
@@ -517,6 +538,27 @@ select {
 
     .mobile-only img {
         width: 100%;
+    }
+
+    body.login-page .page-content {
+        border-radius: 20px;
+        margin: 100px auto 0;
+    }
+
+    #loginBox {
+        max-width: 293px;
+        margin: 0 auto 20px;
+        text-align: left;
+    }
+
+    #loginBox h2 {
+        margin: 20px 0 24px 0;
+        color: #666666;
+        text-transform: uppercase;
+        font-family: arial;
+        font-size: 26px;
+        font-weight: normal;
+        font-weight: bold;
     }
 
     /* Page: login */

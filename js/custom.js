@@ -18,6 +18,13 @@ $( document ).ready(function() {
         $('.mobile-menu ul').append(copyListElement);
     });
 
+    //If on login page
+    if($('#loginBoxbdy').length > 0) {
+
+        $('body').addClass('login-page');
+
+    }
+
     //Move langauge-selector to login box
     if($('.langauge-selector').length > 0) {
 
