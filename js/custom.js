@@ -2,6 +2,10 @@
 
 $( document ).ready(function() {
 
+    if($('.plist .plistE6 .prelement .prbasket a').length > 0) {
+        $('.plist .plistE6 .prelement .prbasket a').append(chooseGiftText);
+    }
+
     //Check how many list elements that #pMenuBaxxl0 contains
     if($('#pMenuBaxxl0 li').length === 1) {
         $('#pMenuBaxxl0').addClass('one-line');

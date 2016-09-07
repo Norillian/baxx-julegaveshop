@@ -53,6 +53,10 @@ img {
     border-right: solid 1px #023333;
 }
 
+.page-menu-top {
+    *display: none;
+}
+
 label,
 input,
 select {
@@ -88,9 +92,12 @@ select {
 #banner > div {
     display: inline-block;
     vertical-align: top;
+    *display: inline;
+    zoom: 1;
 }
 
 #pMenuBaxxl0 {
+    text-align: left;
     max-width: 320px;
 }
 
@@ -98,6 +105,8 @@ select {
     display: inline-block;
     width: 50%;
     text-align: left;
+    *display: inline;
+    zoom: 1;
 }
 
 #pMenuBaxxl0.one-line li {
@@ -234,6 +243,8 @@ select {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     text-align: center;
+    *display: inline !important;
+    zoom: 1;
 }
 
 .plist .plistE6 .prelement {
@@ -304,7 +315,6 @@ select {
  }
 
  .plist .plistE6 .prelement .prbasket a:before {
-     content: "Vælg";
      text-decoration: none;
  }
 
@@ -370,6 +380,9 @@ select {
     box-sizing: border-box;
     vertical-align: top;
     padding: 0 10px;
+    *display: inline;
+    *width: 47%;
+    zoom: 1;
 }
 
 .product-info > div.nav-bar {
@@ -399,6 +412,9 @@ select {
 
 .product-image img {
     height: auto !important;
+    *width: 85% !important;
+    *height: auto !important;
+    *max-width: none;
 }
 
 .product-info > div.product-details {
