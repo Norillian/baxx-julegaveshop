@@ -3,8 +3,12 @@
 $( document ).ready(function() {
 
     if($('.plist .plistE6 .prelement .prbasket a').length > 0) {
-        $('.plist .plistE6 .prelement .prbasket a').append(chooseGiftText);
+        appendSelectGiftText();
     }
+
+    $( ".ecVariantTbl select" ).change(function() {
+        checkForNewSelectGiftElement();
+    });
 
     //Check how many list elements that #pMenuBaxxl0 contains
     if($('#pMenuBaxxl0 li').length === 1) {
@@ -71,4 +75,15 @@ function autoHeightAnimate(element, time){
         autoHeight = element.css('height', 'auto').height(); // Get Auto Height
     	  element.height(curHeight); // Reset to Default Height
     	  element.stop().animate({ height: autoHeight }, time); // Animate to Auto Height
+}
+
+function appendSelectGiftText() {
+    $('.plist .plistE6 .prelement .prbasket a').empty();
+    $('.plist .plistE6 .prelement .prbasket a').append(chooseGiftText);
+}
+
+function checkForNewSelectGiftElement() {
+    $('.plist .plistE6 .prelement .ecVariantTbl .prbasket a').empty();
+    $('.plist .plistE6 .prelement .ecVariantTbl .prbasket a').append(chooseGiftText);
+    setTimeout( appendSelectGiftText, 100 );
 }
