@@ -339,6 +339,7 @@ select {
 .ecVariantTbl select {
     display: block;
     width: 100%;
+    *width: 120px;
     padding: 5px 7px;
     font-size: 14px;
     line-height: 20px;
