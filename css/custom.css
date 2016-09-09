@@ -413,9 +413,9 @@ select {
 
 .product-image img {
     height: auto !important;
-    *width: 85% !important;
-    *height: auto !important;
-    *max-width: none;
+    width: 85% !important;
+    height: auto !important;
+    max-width: none;
 }
 
 .product-info > div.product-details {
